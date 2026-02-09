@@ -1,2 +1,51 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+@theme {
+  --font-logo: 'Lexend Deca', sans-serif;
+}
+
+@layer components {
+
+  .card-shadow {
+    @apply shadow-[0px_2px_0px_0px_rgba(0,_0,_0,_0.1)];
+  }
+
+  .card-spaces {
+    @apply py-8 px-16
+  }
+
+  .input-base {
+    @apply border border-gray-300 rounded px-4 py-2;
+  }
+
+  .contained {
+    @apply min-w-48;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2
+           px-4 py-2 rounded-md font-medium border
+           transition-colors
+           cursor-pointer
+           focus:outline-none focus:ring-2 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-gray-700 hover:text-black 
+    focus:ring-0 focus:ring-offset-0 focus:text-black hover:bg-gray-100;
+  }
+}
+
+body {
+  height: 100vh;
+  background-color: #f3f4f6;
+}
