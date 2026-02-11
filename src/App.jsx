@@ -1,5 +1,12 @@
 import Select from './components/Select'
-import { Search } from 'lucide-react'
+import StaticCard from './components/StaticCard'
+import {
+  Search,
+  Users,
+  UserRoundCheck,
+  UserRoundX,
+  TicketCheck,
+} from 'lucide-react'
 
 function App() {
   const cidades = ['Campinas', 'São Paulo']
@@ -39,6 +46,33 @@ function App() {
           <button className="btn btn-primary contained">
             + Adicionar Técnico
           </button>
+        </section>
+
+        <section className="card-shadow card-spaces flex gap-8">
+          <StaticCard
+            label="Total de Técnicos"
+            value={56}
+            Icon={Users}
+            className="bg-blue-500"
+          />
+          <StaticCard
+            label="Ativos"
+            value={56}
+            Icon={UserRoundCheck}
+            className="bg-green-500"
+          />
+          <StaticCard
+            label="Indisponíveis"
+            value={56}
+            Icon={UserRoundX}
+            className="bg-orange-500"
+          />
+          <StaticCard
+            label="Chamados em aberto"
+            value={56}
+            Icon={TicketCheck}
+            className="bg-purple-500"
+          />
         </section>
       </main>
     </>
