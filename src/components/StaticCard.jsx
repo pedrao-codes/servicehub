@@ -1,9 +1,9 @@
 export default function StaticCard({ label, value, Icon, className }) {
   return (
-    <div className="grid grid-cols-3 gap-2 rounded bg-white card-shadow">
+    <div className="card card-shadow grid grid-cols-3 gap-2 bg-white">
       <Icon
         size={48}
-        className={"block w-full h-full p-6 text-white rounded-l " + className}
+        className={'block w-full h-full p-6 text-white rounded-l ' + className}
       />
 
       <div className="flex flex-col col-start-2 col-span-2 gap-2 p-4">

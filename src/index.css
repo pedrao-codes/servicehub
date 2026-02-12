@@ -2,6 +2,14 @@
 
 @theme {
   --font-logo: 'Lexend Deca', sans-serif;
+  --font-sans: 'Open Sans', sans-serif;
+}
+
+@layer base {
+  
+  body {
+    @apply h-screen bg-gray-200 text-gray-700 font-sans font-medium;
+  }
 }
 
 @layer components {
@@ -14,8 +22,8 @@
     @apply shadow-[0px_0px_1px_1px_rgba(0,_0,_0,_0.1)];
   }
 
-  .card-spaces {
-    @apply py-8 px-16
+  .card-space {
+    @apply py-8 px-16;
   }
 
   .input-base {
@@ -40,16 +48,11 @@
   }
 
   .btn-secondary {
-    @apply bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-400;
+    @apply bg-gray-200 hover:bg-gray-300 focus:ring-gray-400;
   }
 
   .btn-ghost {
-    @apply bg-transparent text-gray-700 hover:text-black 
-    focus:ring-0 focus:ring-offset-0 focus:text-black hover:bg-gray-100;
+    @apply bg-transparent hover:text-black
+    focus:ring-0 focus:ring-offset-0 focus:text-black cursor-pointer;
   }
-}
-
-body {
-  height: 100vh;
-  background-color: #f3f4f6;
 }
